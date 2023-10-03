@@ -150,16 +150,90 @@ def call_register():
 
 
 def tones():
-    pass
+    tone = int(input("""
+                                    1. Ringing tone
+                                    2. Ringing volume
+                                    3. Incoming call alert
+                                    4. Composer
+                                    5. Message alert tone
+                                    6. Keypad tones
+                                    7. Warning and game tones
+                                    8. Vibrating alert
+                                    9. Screen saver
+
+
+                                    Click 0 to go back"""))
+    match tone:
+        case 0:
+            menu()
 
 
 def call_divert():
     pass
 
 
-def settings():
-    pass
+def call_settings():
+    call_setting = int(input("""
+                                    1. Automatic redial
+                                    2. Speed dialling
+                                    3. Call waiting
+                                    4. Own number sending
+                                    5. Automatic answer
 
+                                    0<------"""))
+    match call_setting:
+        case 0:
+            settings()
+
+
+def phone_settings():
+    phone_setting = int(input("""
+                                1. Language
+                                2. Cell info display
+                                3. Welcome note
+                                4. Network note
+                                5. Lights
+                                6. Confirm SIM service actions
+                                
+                                CLick 0 to go back to settings"""))
+    match phone_setting:
+        case 0:
+            settings()
+
+
+def security_setting():
+    security_settingg = int(input(""" 1. PIN code request
+                                2. Call barring service
+                                3. Fixed dialing
+                                4. Closed user group
+                                5. Phone security
+                                6. Change access codes
+                                
+                                0<-------"""))
+    match security_settingg:
+        case 0:
+            settings()
+
+
+def settings():
+    setting = int(input("""
+                            1. Call settings
+                            2. Phone settings
+                            3. Security settings
+                            4. Restore factory settings
+
+                            0<------"""))
+    match setting:
+        case 0:
+            menu()
+        case 1:
+            call_settings()
+        case 2:
+            phone_settings()
+        case 3:
+            security_setting()
+        case 4:
+            print("Restore Factory Settings")
 
 def games():
     pass
@@ -290,6 +364,8 @@ def message_settings():
                 3. Character support
                 """)
             case_: print("Invalid input")
+
+
 
 
 
