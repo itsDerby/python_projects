@@ -71,8 +71,82 @@ def chat():
     pass
 
 
+def show_call_duration():
+    call_duration = int(input("""
+    5. Show call duration
+         1. Last call duration
+         2. All calls' duration
+         3. Received calls duration
+         4. Dialled calls duration
+         5. Clear timers
+                                    
+         0<----"""))
+    match call_duration:
+        case 0:
+            menu()
+
+
+def show_call_cost():
+   show_call = int(input("""
+                                1. Show call costs
+                                    1. Last call cost
+                                       2. All calls' cost
+                                       3. Clear counters
+                                       
+                                       
+                                       0<-----"""))
+   match show_call:
+       case 0:
+           call_register()
+
+
+def call_cost_settings():
+    call_cost_settings = int(input("""
+     7. Call cost settings
+                1. Call cost limit
+                2. Show costs in
+                                       
+                0<-----"""))
+
+    match call_cost_settings:
+        case 0:
+            mainMenu()
+
+
 def call_register():
-    pass
+    register = int(input("""
+                            1. Missed calls
+                            2. Received calls
+                            3. Dialled numbers
+                            4. Erase recent call lists
+                            5. Show call duration
+                            6. Show call costs
+                            7. Call cost settings
+                            8. Prepaid credit
+                            
+                            
+                            Click 0 to go back"""))
+    match register :
+        case 0:
+            mainMenu()
+        case 1:
+            print("I. Missed calls")
+        case 2:
+            print("2. Received calls")
+        case 3:
+            print(" 3. Dialled numbers")
+        case 4:
+            print(" 4. Erase recent call list")
+        case 5:
+            show_call_duration()
+        case 6:
+            show_call_cost()
+        case 7:
+            call_cost_settings()
+        case 8:
+            print("Prepaid Credit")
+
+
 
 
 def tones():
@@ -216,6 +290,7 @@ def message_settings():
                 3. Character support
                 """)
             case_: print("Invalid input")
+
 
 
 
