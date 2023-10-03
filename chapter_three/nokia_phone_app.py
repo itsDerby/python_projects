@@ -19,7 +19,47 @@ def options():
 
 
 def mainMenu():
-    pass
+    main = int(input("""
+                1. Phone book
+                2. Messages
+                3. Chat
+                4. Call Register
+                5. Tones
+                6. Settings
+                7. Call Divert
+                8. Games
+                9. Calculator
+                10. Reminders
+                11. Clock
+                12. Profiles
+                13. SIM services """))
+    match main:
+        case 1:
+            phonebook()
+        case 2:
+            messages()
+        case 3:
+            chat()
+        case 4:
+            call_register()
+        case 5:
+            tones()
+        case 6:
+            settings()
+        case 7:
+            call_divert()
+        case 8:
+            games()
+        case 9:
+            calculator()
+        case 10:
+            reminder()
+        case 11:
+            clock()
+        case 12:
+            profiles()
+        case 13:
+            sim_services()
 
 
 def phonebook():
@@ -64,11 +104,11 @@ def phonebook():
 
 
 def messages():
-    pass
+    mainMenu()
 
 
 def chat():
-    pass
+    mainMenu()
 
 
 def show_call_duration():
@@ -87,7 +127,7 @@ def show_call_duration():
 
 
 def show_call_cost():
-   show_call = int(input("""
+    show_call = int(input("""
                                 1. Show call costs
                                     1. Last call cost
                                        2. All calls' cost
@@ -95,9 +135,9 @@ def show_call_cost():
                                        
                                        
                                        0<-----"""))
-   match show_call:
-       case 0:
-           call_register()
+    match show_call:
+        case 0:
+            call_register()
 
 
 def call_cost_settings():
@@ -126,7 +166,7 @@ def call_register():
                             
                             
                             Click 0 to go back"""))
-    match register :
+    match register:
         case 0:
             mainMenu()
         case 1:
@@ -145,8 +185,6 @@ def call_register():
             call_cost_settings()
         case 8:
             print("Prepaid Credit")
-
-
 
 
 def tones():
@@ -169,7 +207,7 @@ def tones():
 
 
 def call_divert():
-    pass
+    mainMenu()
 
 
 def call_settings():
@@ -235,28 +273,29 @@ def settings():
         case 4:
             print("Restore Factory Settings")
 
+
 def games():
-    pass
+    mainMenu()
 
 
 def calculator():
-    pass
+    mainMenu()
 
 
 def reminder():
-    pass
+    mainMenu()
 
 
 def clock():
-    pass
+    mainMenu()
 
 
 def profiles():
-    pass
+    mainMenu()
 
 
 def sim_services():
-    pass
+    mainMenu()
 
 
 def menu():
@@ -304,10 +343,6 @@ def menu():
             profiles()
         case 13:
             sim_services()
-
-
-def message_settings():
-    pass
 
 
 def messages():
@@ -364,10 +399,6 @@ def message_settings():
                 3. Character support
                 """)
             case_: print("Invalid input")
-
-
-
-
 
 
 menu()
