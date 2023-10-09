@@ -8,6 +8,12 @@ def reverse_array(array):
     return array_reverse
 
 
-num = [4,6,5,4,3,2,1]
-print(reverse_array(num))
+def largest_number(array):
+    largest = array[0]
+    for count in array:
+        if count > largest:
+            largest = count
+    return largest
 
+
+print(largest_number(2, 4, 5, 6))
